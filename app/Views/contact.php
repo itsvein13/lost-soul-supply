@@ -18,7 +18,6 @@ $this->setVar('loader', 'CONTACT');
         align-items: start;
     }
 
-    /* ── Kiri: cara menghubungi ── */
     .contact-ways .eyebrow {
         margin-bottom: 1.2rem;
     }
@@ -75,7 +74,6 @@ $this->setVar('loader', 'CONTACT');
         color: var(--red);
     }
 
-    /* ── Kanan: form ── */
     .contact-form .eyebrow {
         margin-bottom: 1.2rem;
     }
@@ -103,7 +101,6 @@ $this->setVar('loader', 'CONTACT');
 
 <?= $this->section('content') ?>
 <main>
-    <!-- ── Hero ── -->
     <section class="page-hero bg-diagonals">
         <div class="ghost" aria-hidden="true">CONTACT</div>
         <div class="page-hero-content">
@@ -115,7 +112,6 @@ $this->setVar('loader', 'CONTACT');
     </section>
 
     <div class="contact-wrap">
-        <!-- ── Ways ── -->
         <div class="contact-ways">
             <span class="eyebrow reveal">Where to Find Us</span>
             <h2 class="display reveal reveal-d1">Reach Us</h2>
@@ -141,7 +137,6 @@ $this->setVar('loader', 'CONTACT');
             </div>
         </div>
 
-        <!-- ── Form ── -->
         <div class="contact-form">
             <span class="eyebrow reveal">Write to Us</span>
             <h2 class="display reveal reveal-d1">Send a Message</h2>

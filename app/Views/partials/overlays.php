@@ -1,8 +1,6 @@
 <?php
-/** @var string $loader Kata yang tampil di loader (default: LOST SOUL SUPPLY) */
 $loaderWord = $loader ?? 'LOST SOUL SUPPLY';
 ?>
-<!-- Loader (cinematic, sekali per sesi) -->
 <div id="loader" aria-hidden="true">
     <div class="loader-text">
         <?php
@@ -18,5 +16,4 @@ $loaderWord = $loader ?? 'LOST SOUL SUPPLY';
     </div>
 </div>
 
-<!-- Page transition wipe -->
 <div class="page-transition" id="pageTransition"></div>

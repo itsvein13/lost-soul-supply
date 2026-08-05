@@ -1,7 +1,6 @@
 <?= $this->extend('layouts/main') ?>
 
 <?php
-// Konfigurasi layout
 $this->setVar('title', 'Lost Soul Supply');
 $this->setVar('active', 'home');
 $this->setVar('header_variant', 'overlay');
@@ -10,7 +9,6 @@ $this->setVar('loader', 'LOST SOUL SUPPLY');
 
 <?= $this->section('styles') ?>
 <style>
-    /* ── Hero ── */
     .hero {
         position: relative;
         height: 100vh;
@@ -66,7 +64,6 @@ $this->setVar('loader', 'LOST SOUL SUPPLY');
     }
 
     @keyframes vignettePulse {
-
         0%,
         100% {
             opacity: 0.85;
@@ -144,7 +141,6 @@ $this->setVar('loader', 'LOST SOUL SUPPLY');
         transform: translateX(5px);
     }
 
-    /* Scroll indicator */
     .scroll-indicator {
         position: absolute;
         bottom: 2.2rem;
@@ -192,7 +188,6 @@ $this->setVar('loader', 'LOST SOUL SUPPLY');
         }
     }
 
-    /* ── Collection showcase (gallery wall) ── */
     .collection {
         position: relative;
         background: var(--white);
@@ -201,7 +196,6 @@ $this->setVar('loader', 'LOST SOUL SUPPLY');
         border-bottom: 14px solid var(--dark);
     }
 
-    /* Artwork kaligrafi besar, bleed ke kiri */
     .collection-mark {
         position: absolute;
         top: 50%;
@@ -218,7 +212,6 @@ $this->setVar('loader', 'LOST SOUL SUPPLY');
         height: auto;
     }
 
-    /* Titik merah — aksen registrasi */
     .collection-dot {
         position: absolute;
         top: clamp(3rem, 9vh, 6rem);
@@ -253,7 +246,6 @@ $this->setVar('loader', 'LOST SOUL SUPPLY');
         margin-bottom: 1.2rem;
     }
 
-    /* Judul collage — tiap huruf punya sikap */
     .collection-title {
         font-family: var(--font-display);
         font-weight: 400;
@@ -288,7 +280,6 @@ $this->setVar('loader', 'LOST SOUL SUPPLY');
         font-size: 0.8em;
     }
 
-    /* Garmen melayang */
     .collection-gallery {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -334,7 +325,6 @@ $this->setVar('loader', 'LOST SOUL SUPPLY');
         transform: translateY(-12px) rotate(-1.5deg) scale(1.02);
     }
 
-    /* Crop-mark merah di sudut */
     .float-item::before,
     .float-item::after {
         content: '';
@@ -427,7 +417,6 @@ $this->setVar('loader', 'LOST SOUL SUPPLY');
         }
     }
 
-    /* ── Manifesto strip ── */
     .manifesto {
         text-align: center;
     }
@@ -459,7 +448,6 @@ $this->setVar('loader', 'LOST SOUL SUPPLY');
         z-index: 1;
     }
 
-    /* ── Contact invite ── */
     .contact-invite {
         text-align: center;
         background: var(--light);
@@ -499,7 +487,6 @@ $this->setVar('loader', 'LOST SOUL SUPPLY');
 
 <?= $this->section('content') ?>
 <main>
-    <!-- ── Hero ── -->
     <section class="hero" id="home">
         <div class="hero-bg-wrap" data-parallax="0.35">
             <div class="hero-bg"></div>
@@ -529,9 +516,7 @@ $this->setVar('loader', 'LOST SOUL SUPPLY');
         </div>
     </section>
 
-    <!-- ── Collection showcase ── -->
     <section class="collection" id="collection">
-        <!-- Artwork kaligrafi Lost Soul -->
         <div class="collection-mark" aria-hidden="true">
             <img src="<?= lss_img('logo-mark-large.png') ?>" alt="" loading="lazy" />
         </div>
@@ -547,8 +532,6 @@ $this->setVar('loader', 'LOST SOUL SUPPLY');
 
             <div class="collection-gallery">
                 <?php
-                // Preview dinamis: 3 produk terbaru dari database.
-                // Fallback: 3 pilihan kurasi (asset lokal).
                 $fallback = [
                     ['name' => 'Contra Omens Hoodie', 'image' => lss_img('piece-contra-hoodie.png'), 'url' => '/collection'],
                     ['name' => 'Halftone Tee', 'image' => lss_img('piece-halftone.png'), 'url' => '/collection'],
@@ -583,7 +566,6 @@ $this->setVar('loader', 'LOST SOUL SUPPLY');
         </div>
     </section>
 
-    <!-- ── Manifesto ── -->
     <section class="section section--dark bg-diagonals manifesto" id="about">
         <div class="ghost" aria-hidden="true">LOST SOUL</div>
         <blockquote class="reveal">
@@ -594,7 +576,6 @@ $this->setVar('loader', 'LOST SOUL SUPPLY');
         <a href="/about" class="link-line link-line--light reveal reveal-d2">Read Our Story</a>
     </section>
 
-    <!-- ── Contact invite ── -->
     <section class="section contact-invite" id="contact">
         <span class="eyebrow reveal">Reach Out</span>
         <h2 class="display reveal reveal-d1">Talk to Us</h2>

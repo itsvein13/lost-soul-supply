@@ -1,68 +1,45 @@
-# CodeIgniter 4 Application Starter
+# Lost Soul Supply
 
-## What is CodeIgniter?
+Website clothing brand Lost Soul Supply, dibangun pakai CodeIgniter 4 (PHP) + MySQL.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+Bukan sekadar toko online biasa, tapi coba dibikin lebih terasa kayak brand experience. Dark, minimal, sedikit cinematic.
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## Stack
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+- PHP 8.1+ / CodeIgniter 4
+- MySQL
+- Vanilla CSS + JS (gak pakai framework front-end, semua handmade di `public/assets`)
+- Font: Bebas Neue & Cormorant Garamond
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+## Fitur
 
-## Installation & updates
+- Home, Collection, About, Contact — halaman publik
+- Detail produk + cart + checkout (COD / Transfer / QRIS)
+- Auth: login, register, forgot & reset password
+- Admin panel buat kelola produk, order, dan user
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+## Cara Jalanin di Lokal
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+1. Clone repo ini
+2. `composer install`
+3. Copy `env` jadi `.env`, sesuaikan konfigurasi database
+4. Import database (lihat `lsl_new_collection.sql` untuk data koleksi terbaru)
+5. Jalankan `php spark serve` atau taruh di htdocs kalau pakai XAMPP
+6. Buka `localhost:8080` (atau sesuai port yang kepake)
 
-## Setup
+## Struktur Penting
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+```
+app/Controllers/   - logic tiap halaman
+app/Views/         - template
+app/Models/        - query ke database
+public/assets/     - css, js, gambar produk
+```
 
-## Important Change with index.php
+## Catatan
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+Project ini masih terus dikembangin. Kalau nemu bug atau ada ide, tinggal buka issue aja.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+---
 
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Server Requirements
-
-PHP version 8.1 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+Lost Soul Supply — for the battles no one knows.

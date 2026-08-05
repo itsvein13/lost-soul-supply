@@ -1,12 +1,8 @@
-/* ============================================================
-   LOST SOUL SUPPLY — shared motion & interaction
-   ============================================================ */
 (function () {
     'use strict';
 
     var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    /* ── Loader: cinematic on first visit only (flag set in <head>) ── */
     var loader = document.getElementById('loader');
     if (loader && document.documentElement.classList.contains('lss-intro') && !reduced) {
         window.addEventListener('load', function () {
@@ -15,7 +11,6 @@
                 setTimeout(function () { loader.remove(); }, 800);
             }, 1450);
         });
-        /* Safety: never trap the user behind the loader */
         setTimeout(function () {
             if (loader && !loader.classList.contains('hide')) loader.classList.add('hide');
         }, 4000);
@@ -23,7 +18,6 @@
         loader.remove();
     }
 
-    /* ── Header scroll state ── */
     var header = document.querySelector('.header');
     if (header) {
         var onScrollHeader = function () {
@@ -33,7 +27,6 @@
         onScrollHeader();
     }
 
-    /* ── Mobile nav ── */
     var toggle = document.querySelector('.menu-toggle');
     if (toggle) {
         toggle.addEventListener('click', function () {
@@ -46,7 +39,6 @@
         });
     }
 
-    /* ── Page transition wipe ── */
     var pt = document.getElementById('pageTransition');
     if (pt && !reduced) {
         document.addEventListener('click', function (e) {
@@ -62,13 +54,11 @@
             setTimeout(function () { window.location.href = dest; }, 460);
         });
 
-        /* bfcache: reset wipe when navigating back */
         window.addEventListener('pageshow', function (e) {
             if (e.persisted) pt.classList.remove('exit');
         });
     }
 
-    /* ── Scroll reveals ── */
     var revealEls = document.querySelectorAll('.reveal, .reveal-img, .reveal-line');
     if (reduced) {
         revealEls.forEach(function (el) { el.classList.add('visible'); });
@@ -86,7 +76,6 @@
         revealEls.forEach(function (el) { el.classList.add('visible'); });
     }
 
-    /* ── Subtle parallax: <el data-parallax="0.3"> ── */
     var pEls = document.querySelectorAll('[data-parallax]');
     if (pEls.length && !reduced) {
         var ticking = false;

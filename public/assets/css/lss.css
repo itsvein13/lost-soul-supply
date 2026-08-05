@@ -1,19 +1,11 @@
-/* ============================================================
-   LOST SOUL SUPPLY — Design System
-   One language for every page.
-   Type    : Bebas Neue (display) · Cormorant Garamond (voice)
-   Palette : ink on bone, one wound of red
-   ============================================================ */
 
 :root {
-    /* Palet aksen slate (dari terang ke gelap) */
     --accent-mist: #bcc9ce;
     --accent-soft: #9aa7ad;
     --accent: #71787f;
     --accent-deep: #474e52;
     --accent-dim: rgba(113, 120, 128, 0.55);
 
-    /* Alias kompatibilitas — semua referensi var(--red) memakai aksen slate */
     --red: var(--accent);
     --red-dim: var(--accent-dim);
 
@@ -40,7 +32,6 @@
     --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
     --ease-wipe: cubic-bezier(0.76, 0, 0.24, 1);
 
-    /* Intro timing: full on first visit, near-zero afterwards (set by JS) */
     --intro: 0.1s;
 }
 
@@ -48,7 +39,6 @@ html.lss-intro {
     --intro: 1.55s;
 }
 
-/* ── Base ── */
 *,
 *::before,
 *::after {
@@ -79,7 +69,6 @@ img {
     color: var(--white);
 }
 
-/* ── Typography helpers ── */
 .eyebrow {
     font-family: var(--font-display);
     font-size: 0.72rem;
@@ -122,13 +111,11 @@ img {
     margin-right: auto;
 }
 
-/* Di latar gelap, garis aksen memakai tone lebih terang */
 .page-hero .rule,
 .section--dark .rule {
     background: var(--accent-soft);
 }
 
-/* ── Noise overlay (cinematic grain) ── */
 body::after {
     content: '';
     position: fixed;
@@ -139,7 +126,6 @@ body::after {
     opacity: 0.32;
 }
 
-/* ── Loader ── */
 #loader {
     position: fixed;
     inset: 0;
@@ -209,7 +195,6 @@ html.lss-no-intro #loader {
     }
 }
 
-/* ── Page transition ── */
 .page-transition {
     position: fixed;
     inset: 0;
@@ -230,7 +215,6 @@ html.lss-no-intro #loader {
     }
 }
 
-/* ── Header ── */
 .header {
     position: sticky;
     top: 0;
@@ -322,7 +306,6 @@ html.lss-no-intro #loader {
     width: 100%;
 }
 
-/* Header overlay variant (home: transparent over dark hero) */
 .header--overlay {
     position: fixed;
     left: 0;
@@ -366,7 +349,6 @@ html.lss-no-intro #loader {
     box-shadow: none;
 }
 
-/* User chip */
 .user-chip {
     display: flex;
     align-items: center;
@@ -419,7 +401,6 @@ html.lss-no-intro #loader {
     color: var(--red);
 }
 
-/* ── Mobile nav ── */
 .menu-toggle {
     display: none;
     background: none;
@@ -536,7 +517,6 @@ body.nav-open {
     overflow: hidden;
 }
 
-/* ── Buttons ── */
 .btn {
     position: relative;
     display: inline-flex;
@@ -615,7 +595,6 @@ body.nav-open {
     transform: scale(0.98);
 }
 
-/* Text link with hairline */
 .link-line {
     font-family: var(--font-display);
     font-size: 0.78rem;
@@ -641,7 +620,6 @@ body.nav-open {
     color: var(--accent-mist);
 }
 
-/* ── Forms ── */
 .form-group {
     margin-bottom: 1.6rem;
 }
@@ -688,7 +666,6 @@ body.nav-open {
     min-height: 100px;
 }
 
-/* Alerts */
 .alert {
     padding: 0.85rem 1.1rem;
     font-size: 0.95rem;
@@ -709,7 +686,6 @@ body.nav-open {
     color: #2e7d5b;
 }
 
-/* ── Sections ── */
 .section {
     padding: var(--sp-section) 2rem;
     position: relative;
@@ -725,7 +701,6 @@ body.nav-open {
     color: var(--white);
 }
 
-/* Diagonal drifting lines (dark sections) */
 .bg-diagonals::before {
     content: '';
     position: absolute;
@@ -745,7 +720,6 @@ body.nav-open {
     }
 }
 
-/* Ghost display text behind section */
 .ghost {
     position: absolute;
     top: 50%;
@@ -765,7 +739,6 @@ body.nav-open {
     color: rgba(16, 16, 16, 0.04);
 }
 
-/* ── Page hero (dark banner: about / contact / cart / etc.) ── */
 .page-hero {
     background: var(--dark);
     padding: clamp(5rem, 16vh, 8rem) 2rem clamp(4rem, 12vh, 6rem);
@@ -834,7 +807,6 @@ body.nav-open {
     }
 }
 
-/* ── Scroll reveal utilities ── */
 .reveal {
     opacity: 0;
     transform: translateY(36px);
@@ -851,7 +823,6 @@ body.nav-open {
 .reveal-d3 { transition-delay: 0.34s; }
 .reveal-d4 { transition-delay: 0.46s; }
 
-/* Image wipe reveal */
 .reveal-img {
     clip-path: inset(0 0 100% 0);
     transition: clip-path 1.1s var(--ease-out);
@@ -861,7 +832,6 @@ body.nav-open {
     clip-path: inset(0 0 0 0);
 }
 
-/* Line grow reveal */
 .reveal-line {
     width: 0;
     transition: width 1.1s var(--ease-out);
@@ -871,7 +841,6 @@ body.nav-open {
     width: 64px;
 }
 
-/* ── Footer ── */
 .footer {
     background: var(--dark);
     color: rgba(255, 255, 255, 0.35);
@@ -935,7 +904,6 @@ body.nav-open {
     color: rgba(255, 255, 255, 0.25);
 }
 
-/* ── Auth (login / register / reset) ── */
 .auth-main {
     min-height: 100vh;
     min-height: 100svh;
@@ -1052,7 +1020,6 @@ body.nav-open {
     color: var(--red);
 }
 
-/* ── Responsive ── */
 @media (max-width: 860px) {
     .nav-links {
         display: none;
@@ -1067,9 +1034,7 @@ body.nav-open {
     }
 }
 
-/* ── Reduced motion ── */
 @media (prefers-reduced-motion: reduce) {
-
     *,
     *::before,
     *::after {
@@ -1096,4 +1061,3 @@ body.nav-open {
         display: none;
     }
 }
-                                                                                                                                                                                                                                                                                                                

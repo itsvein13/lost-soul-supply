@@ -113,7 +113,6 @@ $this->setVar('loader', 'YOUR CART');
         justify-content: space-between;
     }
 
-    /* Empty */
     .cart-empty {
         text-align: center;
         padding: clamp(3rem, 10vh, 6rem) 1rem;
@@ -150,7 +149,6 @@ $this->setVar('loader', 'YOUR CART');
 
 <?= $this->section('content') ?>
 <main>
-    <!-- ── Hero ── -->
     <section class="page-hero bg-diagonals">
         <div class="ghost" aria-hidden="true">CART</div>
         <div class="page-hero-content">

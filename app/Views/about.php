@@ -8,7 +8,6 @@ $this->setVar('loader', 'OUR STORY');
 
 <?= $this->section('styles') ?>
 <style>
-    /* ── Journal ── */
     .journal {
         max-width: 720px;
         margin: 0 auto;
@@ -29,7 +28,6 @@ $this->setVar('loader', 'OUR STORY');
         color: #4a4744;
     }
 
-    /* Drop cap pada paragraf pembuka */
     .journal-entry:first-of-type p:first-of-type::first-letter {
         font-family: var(--font-display);
         font-size: 4.2em;
@@ -39,7 +37,6 @@ $this->setVar('loader', 'OUR STORY');
         color: var(--accent-deep);
     }
 
-    /* Kalimat besar — nafas di antara paragraf */
     .journal-pull {
         margin: clamp(4rem, 12vh, 7rem) 0;
         text-align: center;
@@ -62,7 +59,6 @@ $this->setVar('loader', 'OUR STORY');
         margin: 2rem auto 0;
     }
 
-    /* Kata-kata berat, ditampilkan sebagai daftar tipografis */
     .journal-words {
         margin: clamp(4rem, 12vh, 7rem) 0;
         text-align: center;
@@ -86,7 +82,6 @@ $this->setVar('loader', 'OUR STORY');
         -webkit-text-stroke-color: var(--red);
     }
 
-    /* Penutup / tanda tangan */
     .journal-close {
         text-align: center;
         margin-top: clamp(3rem, 8vh, 5rem);
@@ -110,7 +105,6 @@ $this->setVar('loader', 'OUR STORY');
         letter-spacing: 0.16em;
     }
 
-    /* ── Principles ── */
     .principles {
         text-align: center;
     }
@@ -179,7 +173,6 @@ $this->setVar('loader', 'OUR STORY');
         margin: 0 auto;
     }
 
-    /* ── CTA ── */
     .about-cta {
         text-align: center;
         background: var(--light);
@@ -218,7 +211,6 @@ $this->setVar('loader', 'OUR STORY');
 
 <?= $this->section('content') ?>
 <main>
-    <!-- ── Hero ── -->
     <section class="page-hero bg-diagonals">
         <div class="ghost" aria-hidden="true">ABOUT</div>
         <div class="page-hero-content">
@@ -229,7 +221,6 @@ $this->setVar('loader', 'OUR STORY');
         </div>
     </section>
 
-    <!-- ── Journal ── -->
     <section class="journal">
         <article class="journal-entry reveal">
             <span class="eyebrow">I &mdash; The Beginning</span>
@@ -271,7 +262,6 @@ $this->setVar('loader', 'OUR STORY');
         </div>
     </section>
 
-    <!-- ── Principles ── -->
     <section class="section section--dark bg-diagonals principles">
         <div class="principles-head">
             <span class="eyebrow eyebrow--light reveal">What We Stand For</span>
@@ -297,7 +287,6 @@ $this->setVar('loader', 'OUR STORY');
         </div>
     </section>
 
-    <!-- ── CTA ── -->
     <section class="section about-cta">
         <span class="eyebrow reveal">The Collection</span>
         <h2 class="display reveal reveal-d1">Find Your Voice</h2>

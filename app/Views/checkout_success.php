@@ -109,7 +109,6 @@ $this->setVar('loader', 'THANK YOU');
 
 <?= $this->section('content') ?>
 <main>
-    <!-- ── Hero ── -->
     <section class="page-hero bg-diagonals">
         <div class="ghost" aria-hidden="true">THANK YOU</div>
         <div class="page-hero-content">
@@ -121,7 +120,6 @@ $this->setVar('loader', 'THANK YOU');
     </section>
 
     <div class="success-wrap">
-        <!-- ── Shipping ── -->
         <div class="success-card reveal">
             <h2 class="display">Shipping Details</h2>
             <div class="detail-row">
@@ -152,7 +150,6 @@ $this->setVar('loader', 'THANK YOU');
             </div>
         </div>
 
-        <!-- ── Items ── -->
         <div class="success-card reveal">
             <h2 class="display">Your Pieces</h2>
             <?php foreach ($items as $item) : ?>

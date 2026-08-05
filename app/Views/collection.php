@@ -8,7 +8,6 @@ $this->setVar('loader', 'THE COLLECTION');
 
 <?= $this->section('styles') ?>
 <style>
-    /* ── Intro ── */
     .catalog-intro {
         padding: clamp(6rem, 18vh, 10rem) 2rem clamp(4rem, 10vh, 6rem);
         max-width: 1240px;
@@ -63,7 +62,6 @@ $this->setVar('loader', 'THE COLLECTION');
         color: var(--muted);
     }
 
-    /* ── Editorial pieces ── */
     .pieces {
         max-width: 1240px;
         margin: 0 auto;
@@ -111,7 +109,6 @@ $this->setVar('loader', 'THE COLLECTION');
         filter: contrast(1.04);
     }
 
-    /* Corner accents */
     .piece-visual .frame::before,
     .piece-visual .frame::after {
         content: '';
@@ -142,7 +139,6 @@ $this->setVar('loader', 'THE COLLECTION');
         height: 46px;
     }
 
-    /* Nomor besar di belakang visual */
     .piece-num {
         position: absolute;
         top: -0.55em;
@@ -161,7 +157,6 @@ $this->setVar('loader', 'THE COLLECTION');
         right: -0.18em;
     }
 
-    /* Teks */
     .piece-body .eyebrow {
         margin-bottom: 1rem;
     }
@@ -214,7 +209,6 @@ $this->setVar('loader', 'THE COLLECTION');
         padding: 4px 10px;
     }
 
-    /* Empty state */
     .catalog-empty {
         max-width: 1240px;
         margin: 0 auto;
@@ -232,7 +226,6 @@ $this->setVar('loader', 'THE COLLECTION');
         color: var(--muted);
     }
 
-    /* Outro */
     .catalog-outro {
         border-top: 1px solid var(--hairline);
         max-width: 1240px;
@@ -276,7 +269,6 @@ $this->setVar('loader', 'THE COLLECTION');
 
 <?= $this->section('content') ?>
 <main>
-    <!-- ── Intro ── -->
     <section class="catalog-intro">
         <div>
             <span class="eyebrow">Lost Soul Supply &mdash; The Archive</span>
@@ -294,7 +286,6 @@ $this->setVar('loader', 'THE COLLECTION');
     </section>
 
     <?php if (!empty($products)) : ?>
-        <!-- ── Pieces ── -->
         <section class="pieces">
             <?php foreach ($products as $i => $product) : ?>
                 <article class="piece">
@@ -332,7 +323,6 @@ $this->setVar('loader', 'THE COLLECTION');
             <?php endforeach; ?>
         </section>
 
-        <!-- ── Outro ── -->
         <section class="catalog-outro">
             <p class="reveal">Every soul deserves to be heard.</p>
             <a href="/about" class="link-line reveal reveal-d1">The Story Behind the Pieces</a>

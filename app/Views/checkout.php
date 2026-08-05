@@ -24,7 +24,6 @@ $this->setVar('loader', 'CHECKOUT');
         margin-bottom: 1.8rem;
     }
 
-    /* ── Payment options ── */
     .pay-options {
         display: grid;
         gap: 0.8rem;
@@ -73,7 +72,6 @@ $this->setVar('loader', 'CHECKOUT');
         outline-offset: 2px;
     }
 
-    /* ── Summary ── */
     .order-summary {
         position: sticky;
         top: 110px;
@@ -155,7 +153,6 @@ $this->setVar('loader', 'CHECKOUT');
 
 <?= $this->section('content') ?>
 <main>
-    <!-- ── Hero ── -->
     <section class="page-hero bg-diagonals">
         <div class="ghost" aria-hidden="true">CHECKOUT</div>
         <div class="page-hero-content">
@@ -166,7 +163,6 @@ $this->setVar('loader', 'CHECKOUT');
     </section>
 
     <div class="checkout-wrap">
-        <!-- ── Form ── -->
         <div class="checkout-form reveal">
             <h2 class="display">Shipping Details</h2>
 
@@ -225,7 +221,6 @@ $this->setVar('loader', 'CHECKOUT');
             </form>
         </div>
 
-        <!-- ── Summary ── -->
         <aside class="order-summary reveal reveal-d1">
             <h2 class="display">Your Order</h2>
 

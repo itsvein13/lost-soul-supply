@@ -1,8 +1,4 @@
 <?php
-/**
- * @var string $active          Halaman aktif: home|collection|about|contact|cart
- * @var string $header_variant  '' (solid) | 'overlay' (transparan di atas hero gelap)
- */
 $active  = $active ?? '';
 $variant = ($header_variant ?? '') === 'overlay' ? ' header--overlay' : '';
 
@@ -45,7 +41,6 @@ $navItems = [
     </nav>
 </header>
 
-<!-- Mobile nav overlay -->
 <nav class="mobile-nav" aria-label="Mobile navigation">
     <?php foreach ($navItems as $key => [$label, $url]) : ?>
         <a href="<?= $url ?>" <?= $active === $key ? 'class="active"' : '' ?>><?= $label ?></a>

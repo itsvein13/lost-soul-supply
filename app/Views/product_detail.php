@@ -18,7 +18,6 @@ $this->setVar('loader', 'THE PIECE');
         align-items: start;
     }
 
-    /* ── Visual ── */
     .piece-page-visual {
         position: sticky;
         top: 110px;
@@ -82,7 +81,6 @@ $this->setVar('loader', 'THE PIECE');
         height: 50px;
     }
 
-    /* ── Body ── */
     .piece-page-body {
         padding-top: 0.5rem;
     }
@@ -193,7 +191,6 @@ $this->setVar('loader', 'THE PIECE');
 <?= $this->section('content') ?>
 <main>
     <div class="piece-page">
-        <!-- ── Visual ── -->
         <div class="piece-page-visual">
             <div class="frame">
                 <img src="<?= esc($product['image'], 'attr') ?>"
@@ -202,7 +199,6 @@ $this->setVar('loader', 'THE PIECE');
             </div>
         </div>
 
-        <!-- ── Body ── -->
         <div class="piece-page-body">
             <a href="/collection" class="back-link">&larr; Back to the Collection</a>
 

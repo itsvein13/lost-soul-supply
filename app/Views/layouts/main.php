@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="/assets/css/lss.css">
 
     <script>
-        /* Intro cinematic hanya sekali per sesi */
         (function() {
             var intro = true;
             try {
