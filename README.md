@@ -1,44 +1,44 @@
 # Lost Soul Supply
 
-Website clothing brand Lost Soul Supply, dibangun pakai CodeIgniter 4 (PHP) + MySQL.
+Website for the clothing brand Lost Soul Supply, built with CodeIgniter 4 (PHP) + MySQL.
 
-Bukan sekadar toko online biasa, tapi coba dibikin lebih terasa kayak brand experience. Dark, minimal, sedikit cinematic.
+Not trying to be just another online store — the goal was to make it feel more like a brand experience. Dark, minimal, a bit cinematic.
 
 ## Stack
 
 - PHP 8.1+ / CodeIgniter 4
 - MySQL
-- Vanilla CSS + JS (gak pakai framework front-end, semua handmade di `public/assets`)
-- Font: Bebas Neue & Cormorant Garamond
+- Vanilla CSS + JS (no front-end framework, everything handmade in `public/assets`)
+- Fonts: Bebas Neue & Cormorant Garamond
 
-## Fitur
+## Features
 
-- Home, Collection, About, Contact — halaman publik
-- Detail produk + cart + checkout (COD / Transfer / QRIS)
+- Home, Collection, About, Contact — public pages
+- Product detail + cart + checkout (COD / Bank Transfer / QRIS)
 - Auth: login, register, forgot & reset password
-- Admin panel buat kelola produk, order, dan user
+- Admin panel to manage products, orders, and users
 
-## Cara Jalanin di Lokal
+## Running Locally
 
-1. Clone repo ini
+1. Clone this repo
 2. `composer install`
-3. Copy `env` jadi `.env`, sesuaikan konfigurasi database
-4. Import database (lihat `lsl_new_collection.sql` untuk data koleksi terbaru)
-5. Jalankan `php spark serve` atau taruh di htdocs kalau pakai XAMPP
-6. Buka `localhost:8080` (atau sesuai port yang kepake)
+3. Copy `env` to `.env` and set your database config
+4. Import the database (see `lsl_new_collection.sql` for the latest collection data)
+5. Run `php spark serve`, or point it to your htdocs if you're using XAMPP
+6. Open `localhost:8080` (or whatever port it's running on)
 
-## Struktur Penting
+## Project Structure
 
 ```
-app/Controllers/   - logic tiap halaman
-app/Views/         - template
-app/Models/        - query ke database
-public/assets/     - css, js, gambar produk
+app/Controllers/   - logic for each page
+app/Views/         - templates
+app/Models/        - database queries
+public/assets/     - css, js, product images
 ```
 
-## Catatan
+## Notes
 
-Project ini masih terus dikembangin. Kalau nemu bug atau ada ide, tinggal buka issue aja.
+Still a work in progress. If you find a bug or have an idea, feel free to open an issue.
 
 ---
 
